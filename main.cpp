@@ -10,7 +10,7 @@ int sc_main(int argc, char* argv[])
     stim Stim1("Stimulus");
     Stim1.A(sigA);
     Stim1.B(sigB);
-
+//hi
     exor DUT("exor");
     DUT.A(sigA);
     DUT.B(sigB);
