@@ -6,8 +6,8 @@
 // TODO: Insert your code here
 SC_MODULE(nand)
 {
-    sc_out<bool> Z;
     sc_in<bool> A, B;
+    sc_out<bool> Z;
 
     void do_nand() {
         Z.write(!(A.read() & B.read()));

@@ -31,6 +31,6 @@ macx: {
     QMAKE_CXXFLAGS += -std=c++0x -stdlib=libc++ -O0 -g
 }
 
-INCLUDEPATH += $${systemc_home}/include
-#LIBS += -L$${systemc_home}/lib-$${systemc_target_arch} -lsystemc
-LIBS += -L$${systemc_home}/lib-$${systemc_target_arch} -Wl,-R$${systemc_home}lib-$${systemc_target_arch} -Wl,-Bstatic -lsystemc -Wl,-Bdynamic -lm -pthread
+ INCLUDEPATH += $${systemc_home}/include
+ LIBS += -L$${systemc_home}/lib-$${systemc_target_arch} -lsystemc
+#LIBS += -L$${systemc_home}/lib-$${systemc_target_arch} -Wl,-R$${systemc_home}lib-$${systemc_target_arch} -Wl,-Bstatic -lsystemc -Wl,-Bdynamic -lm -pthread

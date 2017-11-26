@@ -7,8 +7,9 @@
 // TODO: Insert your code here
 SC_MODULE(exor)
 {
-    sc_out<bool> Z;
     sc_in<bool> A, B;
+    sc_out<bool> Z;
+
 
     nand nanda, nandb, nandc, nandd;
 
