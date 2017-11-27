@@ -7,7 +7,8 @@ SOURCES += main.cpp
 
 QMAKE_CXXFLAGS += -std=c++0x
 
-HEADERS += exor.h
+HEADERS += exor.h \
+    gen.h
 HEADERS += nand.h
 HEADERS += stim.h
 HEADERS += mon.h

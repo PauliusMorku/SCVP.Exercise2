@@ -29,7 +29,7 @@ SC_MODULE(exor)
         nandc.B.bind(tempa);
         nandc.Z.bind(tempc);
 
-        nandd.A.bind(tempa);
+        nandd.A.bind(tempc);
         nandd.B.bind(tempb);
         nandd.Z.bind(Z);
 
