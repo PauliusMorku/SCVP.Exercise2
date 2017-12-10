@@ -5,30 +5,25 @@
 SC_MODULE(stim)
 {
     sc_out<bool> A, B;
-    sc_in<bool> Clk;
-
+    sc_in<bool> clk;
 
 
     void StimGen()
     {
-        wait(SC_ZERO_TIME);
-        wait(Clk.negedge_event());
+        //wait(SC_ZERO_TIME);
+        wait();
         A.write(false);
         B.write(false);
-        wait(Clk.posedge_event());
-        wait(Clk.negedge_event());
+        wait();
         A.write(false);
         B.write(true);
-        wait(Clk.posedge_event());
-        wait(Clk.negedge_event());
+        wait();
         A.write(true);
         B.write(false);
-        wait(Clk.posedge_event());
-        wait(Clk.negedge_event());
+        wait();
         A.write(true);
         B.write(true);
-        wait(Clk.posedge_event());
-        wait(Clk.negedge_event());
+        wait();
         A.write(false);
         B.write(false);
         sc_stop();
@@ -36,7 +31,7 @@ SC_MODULE(stim)
     SC_CTOR(stim)
     {
         SC_THREAD(StimGen);
-        sensitive << Clk;
+        sensitive << clk;
     }
 };
 

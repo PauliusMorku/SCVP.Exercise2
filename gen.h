@@ -2,7 +2,7 @@
 #define GEN_H
 
 #include "systemc.h"
-#endif // GEN_H
+
 
 SC_MODULE(clockGenerator){
     public:
@@ -27,3 +27,5 @@ SC_MODULE(clockGenerator){
     }
 
 };
+
+#endif // GEN_H
